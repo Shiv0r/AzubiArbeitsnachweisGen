@@ -22,7 +22,7 @@ document.addEventListener('click', event =>
     if(isRemoveTaskButtonClicked)
     {
         form.remove(event);
-        form.sortId();
+        form.sort();
     }
 
 });
