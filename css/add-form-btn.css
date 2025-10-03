@@ -1,0 +1,69 @@
+:root
+{
+    --icon-length: 20px;
+    --icon-thickness: 5px;
+}
+
+.add-task-btn
+{
+    position: relative;
+    background: none;
+    border: none;
+
+    margin: 50px; /*needs to be adjusted afterwards */
+    height: var(--icon-length);
+    width: var(--icon-length);
+    border-radius: 1px;
+    padding: 20px;
+
+    outline: 1px solid blue;
+    transform: scale(1);
+    transition: scale 0.25s ease,
+                background-color 0.25s ease;
+   
+}
+
+    .add-task-btn::before,
+    .add-task-btn::after
+    {
+        position: absolute;
+        display: block;
+
+        content: "";
+        top: 50%;
+        left: 50%;
+        transform:  translate(-50%, -50%)
+                    scale(1);
+        
+        height: var(--icon-length);
+        width: var(--icon-thickness);
+        border-radius: 2px;
+
+        background-color: blue;
+    }
+
+    .add-task-btn::after
+    {
+        transform:  translate(-50%, -50%)
+                    scale(1)
+                    rotate(90deg);
+    }
+
+        .add-task-btn:hover
+        {
+            background-color: blue;
+        }
+
+        .add-task-btn:hover::before,
+        .add-task-btn:hover::after
+        {
+            background-color: white;
+        }
+
+        .add-task-btn:active
+        {
+            transform: scale(0.95);
+        }
+
+
+

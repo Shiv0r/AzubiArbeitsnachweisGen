@@ -11,7 +11,18 @@
 
 
     <main>
-        <div id="generate-form"></div>
+        <button type="button" class="add-task-btn" aria-label="Add Task-Formular Button" role="button"></button>
+
+        <form action=""  id="generate-form">
+            <div class="form-wrapper">
+                <label for="taskForm" class="label-task">Task: </label>
+                <input type="text" class="input-task" id="taskForm" name="taskForm" placeholder="type task">
+                <label for="hourForm" class="label-hour">Hour: </label>
+                <input type="number" class="input-hour" id="hourForm" name="hourForm" placeholder="type hour" min="0" max="8">
+                <button type="button" class="remove-task-btn" aria-label="Remove Task-Fomular Button" role="button"></button>
+            </div>
+
+        </form>
     </main>
 
 

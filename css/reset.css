@@ -10,3 +10,8 @@
 {
     box-sizing: inherit;
 }
+
+.add-form-btn
+{
+    content: "bla";
+}
