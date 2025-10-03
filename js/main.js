@@ -22,10 +22,8 @@ document.addEventListener('click', event =>
     if(isRemoveTaskButtonClicked)
     {
         form.remove(event);
-        form.sort();
+        form.sortId();
     }
 
-    console.log(form.count);
-    
 });
 

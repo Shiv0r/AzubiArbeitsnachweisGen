@@ -22,8 +22,9 @@ class Form
 
     create()
     {
+        const countInputs = document.querySelectorAll('.form-wrapper').length;
         const targetEl = document.getElementById('generate-form');
-        let charCapital = `${this.indexToChar(this.count)}${this.idGenerator()}`;
+        let charCapital = `${this.indexToChar(countInputs)}${this.idGenerator()}`;
 
         targetEl.innerHTML += `
                                 <div class="form-wrapper" data-id="${charCapital}">
@@ -34,7 +35,7 @@ class Form
                                     <button type="button" class="remove-task-btn" aria-label="Remove Task-Fomular Button" role="button" data-id="${charCapital}"></button>
                                 </div>
                               `
-        this.count++
+        // this.count++
     }
 
     remove(event)
@@ -53,22 +54,25 @@ class Form
             if(!doesIdMatch) return;
 
             parent.remove();
-            this.count--;
+            // this.count--;
         });
     }
 
-    sort()
+    sortId()
     {
+        const countInputs = document.querySelectorAll('.form-wrapper').length;
+        // this.count = 0;
         const taskFormInputs = document.querySelectorAll('.form-wrapper');
-        this.count = taskFormInputs.length;
         taskFormInputs.forEach(input =>
         {
             input.remove();
         });
 
-        for(let i = 0; i < this.count; i++)
+        console.log(countInputs);
+
+        for(let i = 0; i < countInputs; i++)
         {
-            this.create()
+            this.create();
         }
     }
 }
