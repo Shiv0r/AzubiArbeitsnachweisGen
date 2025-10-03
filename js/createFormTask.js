@@ -87,10 +87,8 @@ class Form
         const task = '.input-task';
         this.getTaskAndHourData(task, hour);
 
+
         const entries = Object.values(this.formObj);
-
-        console.log(entries);
-
         const taskFormInputs = document.querySelectorAll('.form-wrapper');
         const countInputs = taskFormInputs.length;
         taskFormInputs.forEach(input =>

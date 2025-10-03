@@ -10,7 +10,6 @@ document.addEventListener('click', event =>
     if(!isTargetHtml) return;
 
     
-
     const isAddTaskButtonClicked = target.matches('.add-task-btn');
     if(isAddTaskButtonClicked)
     {
