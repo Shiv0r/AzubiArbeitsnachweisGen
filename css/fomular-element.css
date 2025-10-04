@@ -1,19 +1,36 @@
+#task-area
+{
+
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    overflow: visible;
+    height: calc(500px + var(--nav-height));
+    background-color: rgba(0, 0, 255, 0.106);
+    padding:calc( var(--nav-height) + 0px);
+}
 
 #generate-form
 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: calc(var(--nav-height) + 0rem);
+
 }
 
 .form-wrapper
 {
     display: flex;
     align-items: center;
-
+    position: relative;
     
     background-color: rgba(0, 0, 0, 0.129);
     padding: 1rem;
+
     margin-bottom: 1rem;
     border-radius: 1rem;
 }
@@ -22,7 +39,33 @@
 {
     width: 50vw;
 }
+    .input-task[type="text"],
+    .input-hour[type="number"]
+    {
+        height: 30px;
+    }
 
+    .input-task[type="text"]
+    {
+        padding-left: 1rem;
+    }
+
+
+    .input-hour[type="number"]
+    {
+        -moz-appearance: textfield;
+        appearance: textfield;
+
+        width: 6vw;
+        text-align: center;
+    }
+
+    .input-hour[type="number"]::-webkit-inner-spin-button,
+    .input-hour[type="number"]::-webkit-outer-spin-button
+    {
+        -webkit-appearance: none;
+    }
+   
 
 .remove-task-btn
 {
@@ -30,9 +73,8 @@
     background: none;
     border: none;
     margin-left: 20px;
-
-    height: 100%;
-    width: 20px;
+    height: 30px;
+    width: 30px;
 
 }
 
@@ -72,3 +114,18 @@
         outline-offset: -1px;
         z-index: 10;
     }
+
+
+
+.box
+{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    margin-bottom: 1rem;
+}
+
+.boxes
+{
+    margin-bottom: 3rem;
+}

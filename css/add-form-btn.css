@@ -2,15 +2,24 @@
 {
     --icon-length: 20px;
     --icon-thickness: 5px;
+    --icon-position: 4rem;
+}
+
+.button-sticky
+{
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
 }
 
 .add-task-btn
 {
     position: relative;
+    top: calc(var(--nav-height) + 0rem);
     background: none;
     border: none;
 
-    margin: 50px; /*needs to be adjusted afterwards */
+    margin: 0rem 0rem var(--nav-height) 0rem;
     height: var(--icon-length);
     width: var(--icon-length);
     border-radius: 1px;

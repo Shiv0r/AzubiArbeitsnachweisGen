@@ -1,0 +1,38 @@
+:root
+{
+    --nav-height: 3rem;
+}
+
+nav
+{
+    position: fixed;
+
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    height: var(--nav-height);
+    
+    z-index: 20;
+    background-color: blue;
+}
+
+#nav__flex
+{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-right: 2rem;
+}
+
+#nav__flex > li
+{
+    list-style: none;
+    
+}
+
+#nav__flex > li > a
+{
+    text-decoration: none;
+    color: white;
+}
+

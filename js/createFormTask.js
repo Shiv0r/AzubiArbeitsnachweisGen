@@ -26,19 +26,20 @@ class Form
     {
         const countInputs = document.querySelectorAll('.form-wrapper').length;
         const targetEl = document.getElementById('generate-form');
-        let charCapital = `${this.indexToChar(countInputs)}${this.idGenerator()}`;
+        const charCapital = this.indexToChar(countInputs);
+        let inputId = `${this.indexToChar(countInputs)}${this.idGenerator()}`;
 
         const wrapper = document.createElement('div');
         wrapper.className = 'form-wrapper';
-        wrapper.dataset.id = charCapital;
+        wrapper.dataset.id = inputId;
         
 
         wrapper.innerHTML = `
-                                <label for="task-form-${charCapital}" class="label-task">Task: </label>
-                                <input type="text" class="input-task" id="task-form-${charCapital}" name="task-form" placeholder="type task" data-id="${charCapital}">
-                                <label for="hour-form-${charCapital}" class="label-hour">Hour: </label>
-                                <input type="number" class="input-hour" id="hour-form-${charCapital}" name="hour-form-${charCapital}" data-id="${charCapital}" placeholder="type hour" min="0" max="8">
-                                <button type="button" class="remove-task-btn" aria-label="Remove Task-Fomular Button" role="button" data-id="${charCapital}"></button>
+                                <label for="task-form-${inputId}" class="label-task">Task ${charCapital}: </label>
+                                <input type="text" class="input-task" id="task-form-${inputId}" name="task-form" placeholder="type task" data-id="${inputId}">
+                                <label for="hour-form-${inputId}" class="label-hour">Hour: </label>
+                                <input type="number" class="input-hour" id="hour-form-${inputId}" name="hour-form-${inputId}" data-id="${inputId}" placeholder="type hour" min="0" max="8">
+                                <button type="button" class="remove-task-btn" aria-label="Remove Task-Fomular Button" role="button" data-id="${inputId}"></button>
                               `
 
         targetEl.appendChild(wrapper);                
