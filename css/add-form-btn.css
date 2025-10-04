@@ -9,22 +9,24 @@
 {
     position: sticky;
     top: 0;
+
     align-self: flex-start;
 }
 
 .add-task-btn
 {
-    position: relative;
-    top: calc(var(--nav-height) + 0rem);
+
     background: none;
     border: none;
 
-    margin: 0rem 0rem var(--nav-height) 0rem;
+    position: relative;
+    top: calc(var(--nav-height) + 0rem);
     height: var(--icon-length);
     width: var(--icon-length);
-    border-radius: 1px;
     padding: 20px;
+    margin: 0rem 0rem var(--nav-height) 0rem;
 
+    border-radius: 1px;
     outline: 1px solid blue;
     transform: scale(1);
     transition: scale 0.25s ease,
@@ -35,17 +37,17 @@
     .add-task-btn::before,
     .add-task-btn::after
     {
-        position: absolute;
         display: block;
-
         content: "";
+        
+        position: absolute;
         top: 50%;
         left: 50%;
         transform:  translate(-50%, -50%)
                     scale(1);
-        
         height: var(--icon-length);
         width: var(--icon-thickness);
+        
         border-radius: 2px;
 
         background-color: blue;
