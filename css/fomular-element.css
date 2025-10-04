@@ -77,7 +77,8 @@
     height: 30px;
     width: 30px;
 
-    transition: outline 0.25 ease;
+    transition: outline 0.25s ease,
+                border-radius 0.15s ease;
     outline: 1px solid blue;
     border-radius: 50px;
 
@@ -112,6 +113,7 @@
     .remove-task-btn:hover
     {
         outline: 1px solid red;
+        border-radius: 5px;
     }
 
     .remove-task-btn:hover::after
