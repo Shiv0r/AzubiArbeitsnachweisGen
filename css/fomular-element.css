@@ -4,8 +4,8 @@
     display: flex;
     justify-content: center;
     gap: 3rem;
-    overflow: visible;
-    height: calc(500px + var(--nav-height));
+    overflow-y: visible;
+    max-height: calc(500px + var(--nav-height));
     background-color: rgba(0, 0, 255, 0.106);
     padding:calc( var(--nav-height) + 0px);
 }
