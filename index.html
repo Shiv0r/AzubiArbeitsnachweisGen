@@ -3,12 +3,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <script type="module" src="./js/main.js" defer></script>
     <title>ANG</title>
 </head>
 <body>
     <header>
         <nav>
+            <div class="nav__flex-name">
+                <h1 id="company-name">DIGITAS</h1>
+                <h2 id="app-name">- Ausbildungsnachweis Generator</h2>
+            </div>
+            
             <ul id="nav__flex">
                 <li><a href="#">Home</a></li>
                 <li><a href="#task-area">Task-Area</a></li>
@@ -19,19 +27,18 @@
 
 
     <main>
-
         <section id="task-area">
             <div class="button-sticky">
                 <button type="button" class="add-task-btn" aria-label="Add Task-Formular Button" role="button"></button>
             </div>
             <form action=""  id="generate-form">
-                <!-- <div class="form-wrapper">
+                <div class="form-wrapper">
                     <label for="taskForm" class="label-task">Task: </label>
                     <input type="text" class="input-task" id="taskForm" name="taskForm" placeholder="type task">
                     <label for="hourForm" class="label-hour">Hour: </label>
                     <input type="number" class="input-hour" id="hourForm" name="hourForm" placeholder="type hour" min="0" max="8">
                     <button type="button" class="remove-task-btn" aria-label="Remove Task-Fomular Button" role="button"></button>
-                </div> -->
+                </div>
             </form>
         </section>
 

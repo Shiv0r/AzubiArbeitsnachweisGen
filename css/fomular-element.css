@@ -77,6 +77,10 @@
     height: 30px;
     width: 30px;
 
+    transition: outline 0.25 ease;
+    outline: 1px solid blue;
+    border-radius: 50px;
+
 }
 
 .label-hour
@@ -102,7 +106,13 @@
     height: 4px;
     background: blue;
     transition: background 0.25s ease;
+
 }
+
+    .remove-task-btn:hover
+    {
+        outline: 1px solid red;
+    }
 
     .remove-task-btn:hover::after
     {

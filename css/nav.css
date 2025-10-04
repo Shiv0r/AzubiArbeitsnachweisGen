@@ -1,6 +1,6 @@
 :root
 {
-    --nav-height: 3rem;
+    --nav-height: 5rem;
 }
 
 nav
@@ -8,10 +8,10 @@ nav
     position: fixed;
 
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     width: 100vw;
     height: var(--nav-height);
-    
     z-index: 20;
     background-color: blue;
 }
@@ -24,6 +24,13 @@ nav
     margin-right: 2rem;
 }
 
+.nav__flex-name
+{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 #nav__flex > li
 {
     list-style: none;
@@ -32,7 +39,28 @@ nav
 
 #nav__flex > li > a
 {
+    padding: 0.3rem;
     text-decoration: none;
     color: white;
 }
+
+
+#company-name
+{
+    color: white;
+    margin-left: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#app-name
+{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+}
+
+
+
+
 
